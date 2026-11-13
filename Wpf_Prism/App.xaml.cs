@@ -33,5 +33,4 @@ namespace Wpf_Prism
             });
         }
     }
-
 }

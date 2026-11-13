@@ -8,7 +8,14 @@
         prism:ViewModelLocator.AutoWireViewModel="True"
         Title="User" Height="450" Width="800">
     <Grid>
-        <TextBlock Text="{Binding UName}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Text="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <TextBox Grid.Row="0" Text="{Binding UserName, UpdateSourceTrigger=PropertyChanged}" /> 
+        <TextBox Grid.Row="1" Text="{Binding PassWord, UpdateSourceTrigger=PropertyChanged}" />
+        <Button Grid.Row="2" Content="Login" Command="{Binding LoginCommand}" Height="50" Width="100" />
     </Grid>
 </Window>
