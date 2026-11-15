@@ -5,5 +5,14 @@
     <Compile Update="View\DialogUc.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\RegionMain.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ViewA.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ViewB.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

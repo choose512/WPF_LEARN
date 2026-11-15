@@ -1,6 +1,5 @@
 ﻿using System.Windows;
 using Wpf_Prism.View;
-using Wpf_Prism.ViewModel;
 
 namespace Wpf_Prism
 {
@@ -12,7 +11,7 @@ namespace Wpf_Prism
         //启动窗体
         protected override Window CreateShell()
         {
-            return Container.Resolve<UseDialog>();
+            return Container.Resolve<RegionMain>();
         }
 
         //注册服务
@@ -20,6 +19,8 @@ namespace Wpf_Prism
         {
             //对话框名称默认为类型名：DialogUc
             containerRegistry.RegisterDialog<DialogUc>();
+            containerRegistry.RegisterForNavigation<ViewA>();
+            containerRegistry.RegisterForNavigation<ViewB>();
         }
 
         //自定义规则：Wpf_Prism.View.User -> Wpf_Prism.ViewModel.UserVm
